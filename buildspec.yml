@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install 
+      #-f --unsafe-perm=true --allow-root
+  post_build:
+    commands:
+      - echo build completed
+artifacts:
+  files:
+    - appspec.yml
+    - script/
+    - node_modules/
+    - '**/*'
