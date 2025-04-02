@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /var/www/nodejs
-sudo pm2 start app.js -f --name "api"
+sudo pm2 start index.js -f --name "api"
